@@ -1,0 +1,14 @@
+#Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.
+
+
+
+
+class Solution(object):
+    def reverseStr(self, s, k):
+        b=list(s)
+        n=len(b)
+        for i in range(0,n,2*k):
+            b[i:i+k]=reversed(b[i:i+k])
+        return "".join(b)
+s1=Solution()
+print(s1.reverseStr("abcdefg",2))
